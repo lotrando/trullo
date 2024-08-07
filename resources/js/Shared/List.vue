@@ -17,7 +17,7 @@
         </svg>
       </button>
     </header>
-    <CardCreateForm :listId="id" @new-card-coming="addNewCard($event)" />d
+    <CardCreateForm :listId="id" @new-card-coming="addNewCard($event)" />
     <transition-group name="card" tag="ul">
       <Card
         v-for="card in cards"
