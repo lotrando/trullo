@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter';
+}
+
+@layer utilities {
+	.text-shadow {
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
+	}
+}
+
+@layer components {
+	/**
+	 * CARDS
+	 */
+	.card {
+		@apply my-2 leading-snug bg-white border-b-2 border-gray-300 cursor-pointer rounded;
+	}
+
+	/**
+	 * LISTS
+	 */
+	.card:hover {
+		@apply bg-gray-100;
+	}
+
+	.list {
+		/* size */
+		@apply flex-shrink-0;
+		@apply w-full mb-10 p-3 pb-2;
+
+		/* colors */
+		@apply bg-gray-200;
+		@apply text-gray-800;
+
+		/* special stuff */
+		@apply rounded-lg shadow-xl;
+	}
+
+	/**
+	 * BUTTONS
+	 */
+	.btn {
+		@apply font-semibold text-white border-b border-gray-600 py-1 px-3 text-shadow rounded;
+	}
+
+	.btn-green {
+		@apply bg-green-500;
+	}
+
+	.btn-green:hover,
+	.btn-green:active {
+		@apply bg-green-400;
+	}
+
+	@screen sm {
+		.list {
+			@apply w-80 mx-4 mb-0;
+		}
+	}
+}
